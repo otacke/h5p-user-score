@@ -6,6 +6,8 @@ var H5PUserScoreStorage = window.H5PUserScoreStorage || {};
 ( function() {
 	'use strict';
 
+	// blogId passed by PHP
+	// wpAJAXurl passed by PHP
 	var keynamePrefix = 'h5p-user-score';
 	var maxScores;
 
@@ -55,7 +57,7 @@ var H5PUserScoreStorage = window.H5PUserScoreStorage || {};
 		}
 
 		H5PUserScoreStorage.storeLocalStorage(
-			'h5p-user-score-' + contentId,
+			[ blogId, keynamePrefix, contentId ].join( '-' ),
 			{
 				contentId: contentId,
 				scoreRaw: xapi.result.score.raw || 0,
@@ -105,7 +107,7 @@ var H5PUserScoreStorage = window.H5PUserScoreStorage || {};
 			var contentId = divScore.getAttribute( 'data-h5p-content-id' );
 
 			if ( contentId && -1 !== contentId ) {
-				score = H5PUserScoreStorage.restoreLocalStorage( 'h5p-user-score-' + contentId );
+				score = H5PUserScoreStorage.restoreLocalStorage([ blogId, keynamePrefix, contentId ].join( '-' ) );
 				if ( score && undefined !== typeof score.scoreRaw ) {
 					divScore.innerHTML = score.scoreRaw;
 				} else if ( ! maxScores ) {
@@ -128,7 +130,7 @@ var H5PUserScoreStorage = window.H5PUserScoreStorage || {};
 			var score;
 			var contentId = divScore.getAttribute( 'data-h5p-content-id' );
 			if ( contentId && -1 !== contentId ) {
-				score = H5PUserScoreStorage.restoreLocalStorage( 'h5p-user-score-' + contentId );
+				score = H5PUserScoreStorage.restoreLocalStorage([ blogId, keynamePrefix, contentId ].join( '-' ) );
 				if ( score && undefined !== typeof score.scoreMax ) {
 					divScore.innerHTML = score.scoreMax;
 				} else if ( ! maxScores ) {
@@ -151,7 +153,7 @@ var H5PUserScoreStorage = window.H5PUserScoreStorage || {};
 			var score;
 			var contentId = divScore.getAttribute( 'data-h5p-content-id' );
 			if ( contentId && -1 !== contentId ) {
-				score = H5PUserScoreStorage.restoreLocalStorage( 'h5p-user-score-' + contentId );
+				score = H5PUserScoreStorage.restoreLocalStorage([ blogId, keynamePrefix, contentId ].join( '-' ) );
 				if ( score && undefined !== typeof score.scoreRaw && undefined !== typeof score.scoreMax ) {
 					divScore.innerHTML = Math.round( 100 * score.scoreRaw / score.scoreMax ) + ' %';
 				} else if ( ! maxScores ) {

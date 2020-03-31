@@ -33,6 +33,7 @@ function setup() {
 
 	// Pass variables to JavaScript
 	wp_localize_script( 'H5PUSERSCORE', 'wpAJAXurl', admin_url( 'admin-ajax.php' ) );
+	wp_localize_script( 'H5PUSERSCORE', 'blogId', [ get_current_blog_id() ] );
 }
 
 /**
