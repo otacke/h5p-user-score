@@ -97,13 +97,9 @@ class Database {
 	public static function get_max_scores( ) {
 		global $wpdb;
 
-		$foo = $wpdb->get_results(
+		return $wpdb->get_results(
 			'SELECT id_content, score_max FROM ' . self::$table_main
 		);
-
-		error_log( print_r( $foo, true ) );
-
-		return $foo;
 	}
 
 	/**
