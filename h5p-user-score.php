@@ -21,8 +21,8 @@ if ( ! defined( 'H5PUSERSCORE_VERSION' ) ) {
 }
 
 // Requirements
-require_once( __DIR__ . '/class-h5p-user-score-util.php' );
-require_once( __DIR__ . '/class-h5p-user-score-database.php' );
+require_once( __DIR__ . '/class-util.php' );
+require_once( __DIR__ . '/class-database.php' );
 
 /**
  * Setup the plugin.
