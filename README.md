@@ -26,7 +26,7 @@ Use the shortcode _[h5pScore value="maxScore" id="xyz"]_ to include the maximum 
 ## Example
 Let's say you have an H5P multiple choice quiz with ID 17 available for your site's users. Assume the current user scored 5 points while the maximum possible score is 10 points.
 
-On any page or post (not limited to those where the H5P interaction is available), you could e. g. write:
+On any page or post (not limited to those where the H5P interaction is available), you could e.g. write:
 
     In the multiple choice quiz, you scored [h5pScore value="score" id="17"] points out of [h5pScore value="max" id="17"]. That's [h5pScore value="percentage" id="17"] percent!
 
@@ -36,3 +36,6 @@ On the page or post, this would render as:
 
 ## License
 H5P-User-Score is licensed under the [MIT License](https://github.com/otacke/h5p-user-score/blob/master/LICENSE).
+
+## Funding
+The H5P User Score WordPress Plugin was developed by the University of Freiburg, funded by the Ministry of Science, Research and Arts Baden-Württemberg, Germany.
