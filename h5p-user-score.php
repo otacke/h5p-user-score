@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: H5P-User-Score (by Uni Freiburg)
+ * Plugin Name: H5P-User-Score
  * Plugin URI: https://github.com/otacke/h5p-user-score
  * Text Domain: H5PUSERSCORE
  * Domain Path: /languages
