@@ -8,7 +8,7 @@
 Allows you to add user score information of H5P interactions to WordPress posts and pages.
 
 ## Install/Usage
-Install H5P-User-Score from the [Wordpress Plugin directory](https://wordpress.org/plugins/h5p-user-score) or via your Wordpress instance and activate it. Done.
+[Download H5P-User-Score](https://github.com/otacke/h5p-user-score/archive/master.zip), install it on your Wordpress instance and activate it. Done.
 
 You can then use WordPress shortcodes to include score information in posts and pages.
 
