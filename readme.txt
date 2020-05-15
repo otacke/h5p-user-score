@@ -46,7 +46,7 @@ On the page or post, this would render as:
 
 == Installation ==
 
-Install H5P-User-Score from the Wordpress Plugin directory or via your Wordpress instance and activate it. Done.
+Download H5P-User-Score, install it on your Wordpress instance and activate it. Done.
 
 == Changelog ==
 
