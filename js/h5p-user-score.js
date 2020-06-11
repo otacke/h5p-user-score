@@ -207,7 +207,7 @@ var H5PUserScoreStorage = window.H5PUserScoreStorage || {};
 	/**
 	 * Add xAPI listeners to all H5P instances that can trigger xAPI.
 	 */
-	document.onreadystatechange = function() {
+	document.addEventListener( 'readystatechange', function() {
 		var iframes = document.getElementsByTagName( 'iframe' );
 		var i;
 		var contentWindow;
@@ -260,5 +260,5 @@ var H5PUserScoreStorage = window.H5PUserScoreStorage || {};
 				handleH5PInstanceActive( window );
 			}
 		}
-	};
+	});
 }  () );
